@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Stack Exchange Dark Theme",
   "version": "0.0.2",
-  "description": "Adds a dark theme to Stack Exchange subdomains.",
+  "description": "Adds a dark theme to Stack Exchange websites.",
   "permissions": ["activeTab"],
   "content_scripts": [
     {
