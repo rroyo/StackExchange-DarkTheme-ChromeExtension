@@ -10,14 +10,18 @@ html {
 }
 
 #container {
-  width: max-content;
   background-color: #222;
   color: white;
   border-color: #222;
   padding: 15px;
 }
 
+#info {
+  margin: 15px 0;
+}
+
 #toggle {
+  width: max-content;
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -34,6 +38,7 @@ html {
 #links a {
   color: white;
   text-decoration: none;
+  font-weight: 700;
 }
 
 #toggle-title {

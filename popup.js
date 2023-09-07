@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', event => {
+document.addEventListener('DOMContentLoaded', () => {
   const toggleSwitch = document.getElementById('toggle-switch');
 
   chrome.runtime.sendMessage({ command: 'getDarkModeState' }, function (response) {
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', event => {
     toggleSwitch.checked = response.isDarkMode;
   });
 
-  toggleSwitch.addEventListener('change', event => {
+  toggleSwitch.addEventListener('change', () => {
     chrome.runtime.sendMessage({ command: 'toggleDarkMode' }, function (response) {
       // Using .click() to toggle checkbox and trigger CSS transition
       if (response.isDarkMode !== toggleSwitch.checked) {
