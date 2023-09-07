@@ -1,12 +1,20 @@
 {
   "manifest_version": 3,
   "name": "Stack Exchange Dark Theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adds a dark theme to Stack Exchange subdomains.",
   "permissions": ["activeTab"],
   "content_scripts": [
     {
-      "matches": ["*://*.stackexchange.com/*"],
+      "matches": [
+        "*://*.mathoverflow.net/*",
+        "*://*.stackapps.com/*",
+        "*://*.askubuntu.com/*",
+        "*://*.superuser.com/*",
+        "*://*.stackoverflow.com/*",
+        "*://*.stackexchange.com/*",
+        "*://*.serverfault.com/*"
+      ],
       "js": ["content.js"]
     }
   ]
