@@ -3,6 +3,11 @@
   "name": "Stack Exchange Dark Theme",
   "version": "0.0.3",
   "description": "Adds the 'dark-theme' class to Stack Exchange websites. It may not perfectly suit some of the websites.",
+  "author": {
+    "name": "Ramon Royo",
+    "twitter": "@R4mroy",
+    "github": "https://github.com/rroyo/StackExchange-DarkTheme-ChromeExtension"
+  },
   "permissions": ["activeTab"],
   "content_scripts": [
     {
