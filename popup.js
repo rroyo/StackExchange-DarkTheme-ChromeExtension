@@ -2,12 +2,16 @@ document.addEventListener('DOMContentLoaded', event => {
   const toggleSwitch = document.getElementById('toggle-switch');
 
   chrome.runtime.sendMessage({ command: 'getDarkModeState' }, function (response) {
+    // Setting .checked directly to sync initial state
     toggleSwitch.checked = response.isDarkMode;
   });
 
   toggleSwitch.addEventListener('change', event => {
     chrome.runtime.sendMessage({ command: 'toggleDarkMode' }, function (response) {
-      toggleSwitch.checked = response.isDark;
+      // Using .click() to toggle checkbox and trigger CSS transition
+      if (response.isDarkMode !== toggleSwitch.checked) {
+        toggleSwitch.click();
+      }
     });
   });
 });

@@ -66,6 +66,7 @@ html {
   background-color: #ccc;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  color: red;
 }
 
 .slider:before {
@@ -97,6 +98,7 @@ input:checked + .slider:before {
 /* Rounded sliders */
 .slider.round {
   border-radius: 18px;
+  color: red;
 }
 
 .slider.round:before {

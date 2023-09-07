@@ -6,6 +6,9 @@ chrome.runtime.sendMessage({ command: 'getDarkModeState' }, function (response) 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.command === 'darkModeChanged') {
     toggleDarkMode(request.isDarkMode);
+    sendResponse({}); // Always send a response
+  } else if (request.command === 'ping') {
+    sendResponse({ pong: true }); // Reply to the 'ping'
   }
 });
 
