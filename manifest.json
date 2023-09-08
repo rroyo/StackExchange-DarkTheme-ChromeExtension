@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Stack Exchange Dark Theme",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Adds the 'dark-theme' class to Stack Exchange websites body tag. It may not perfectly suit some of the websites.",
   "author": {
     "name": "Ramon Royo",
     "twitter": "@R4mroy",
     "github": "https://github.com/rroyo/StackExchange-DarkTheme-ChromeExtension"
   },
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "storage"],
   "content_scripts": [
     {
       "matches": [
@@ -24,16 +24,16 @@
     }
   ],
   "icons": {
-    "16": "images/icon16.png",
-    "48": "images/icon48.png",
-    "128": "images/icon128.png"
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "images/icon16.png",
-      "48": "images/icon48.png",
-      "128": "images/icon128.png"
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
     },
     "default_script": "popup.js"
   },

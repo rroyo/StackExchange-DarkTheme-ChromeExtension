@@ -1,8 +1,27 @@
+
+
 let isDarkMode = false;
+
+// Initialize the dark mode state from storage on script startup
+chrome.storage.local.get('isDarkMode', (data) => {
+    if (data.hasOwnProperty('isDarkMode')) {
+        isDarkMode = data.isDarkMode;
+    }
+});
+
+chrome.storage.local.get('isDarkMode', (data) => {
+    if (data.hasOwnProperty('isDarkMode')) {
+        isDarkMode = data.isDarkMode;
+    }
+});
+
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.command === 'toggleDarkMode') {
-    isDarkMode = !isDarkMode;
+    
+isDarkMode = !isDarkMode;
+chrome.storage.local.set({ 'isDarkMode': isDarkMode });
+
 
     // Query only for StackExchange websites where the content script should be running
     const urlPatterns = [
