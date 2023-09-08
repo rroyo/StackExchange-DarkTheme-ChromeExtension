@@ -27,18 +27,13 @@ html {
   align-items: center;
 }
 
-#links {
+#social-media-links {
   margin-top: 10px;
   display: flex;
   flex-flow: row;
   align-items: center;
-  justify-content: space-evenly;
-}
-
-#links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
+  justify-content: right;
+  gap: 10px;
 }
 
 #toggle-title {
@@ -68,10 +63,9 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  color: red;
 }
 
 .slider:before {
@@ -81,9 +75,13 @@ html {
   width: 13px;
   left: 2px;
   bottom: 2px;
-  background-color: white;
+  background-color: #555;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  background-color: white;
 }
 
 input:checked + .slider {
@@ -103,7 +101,6 @@ input:checked + .slider:before {
 /* Rounded sliders */
 .slider.round {
   border-radius: 18px;
-  color: red;
 }
 
 .slider.round:before {
