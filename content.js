@@ -3,16 +3,15 @@ chrome.runtime.sendMessage({ command: 'getDarkModeState' }, function (response) 
 });
 
 // Listen for darkModeChanged messages from background.js
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((request, _, sendResponse) => {
   if (request.command === 'darkModeChanged') {
     toggleDarkMode(request.isDarkMode);
-    sendResponse({}); // Always send a response
+    sendResponse({});
   } else if (request.command === 'ping') {
-    sendResponse({ pong: true }); // Reply to the 'ping'
+    sendResponse({ pong: true });
   }
 });
 
-// Function that adds/removes the theme-dark class
 function toggleDarkMode(isDarkMode) {
   if (isDarkMode) {
     document.body.classList.add('theme-dark');
