@@ -49,8 +49,16 @@ chrome.storage.local.set({ 'isDarkMode': isDarkMode });
     });
 
     sendResponse({ isDarkMode: isDarkMode });
-  } else if (request.command === 'getDarkModeState') {
-    sendResponse({ isDarkMode: isDarkMode });
-  }
+  } 
+else if (request.command === 'getDarkModeState') {
+    chrome.storage.local.get('isDarkMode', (data) => {
+        if (data.hasOwnProperty('isDarkMode')) {
+            sendResponse({ isDarkMode: data.isDarkMode });
+        } else {
+            sendResponse({ isDarkMode: false });
+        }
+    });
+    return true;  // Indicate that response will be sent asynchronously
+}
   return true;
 });

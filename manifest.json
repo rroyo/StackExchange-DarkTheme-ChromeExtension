@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Stack Exchange Dark Theme",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Adds the 'dark-theme' class to Stack Exchange websites body tag. It may not perfectly suit some of the websites.",
   "author": {
     "name": "Ramon Royo",
